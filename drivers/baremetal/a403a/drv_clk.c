@@ -26,7 +26,7 @@ void system_clock_config(int target_freq_Mhz)
     }
 
     /* config pll clock resource */
-    crm_pll_config(CRM_PLL_SOURCE_HEXT_DIV, CRM_PLL_MULT_50, CRM_PLL_OUTPUT_RANGE_GT72MHZ);
+    crm_pll_config(CRM_PLL_SOURCE_HEXT_DIV, CRM_PLL_MULT_48, CRM_PLL_OUTPUT_RANGE_GT72MHZ);
 
     /* config hext division */
     crm_hext_clock_div_set(CRM_HEXT_DIV_2);
