@@ -391,15 +391,15 @@ void dma_init(dma_channel_type *dmax_channely, dma_init_type *dma_init_struct)
   * @param  dmamux_req_sel:
   *         this parameter can be one of the following values:
   *         - DMAMUX_DMAREQ_ID_REQ_G1        - DMAMUX_DMAREQ_ID_REQ_G2        - DMAMUX_DMAREQ_ID_REQ_G3        - DMAMUX_DMAREQ_ID_REQ_G4
-  *         - DMAMUX_DMAREQ_ID_ADC1          - DMAMUX_DMAREQ_ID_DAC1          - DMAMUX_DMAREQ_ID_DAC2          - DMAMUX_DMAREQ_ID_TMR6_OVERFLOW    
-  *         - DMAMUX_DMAREQ_ID_TMR7_OVERFLOW - DMAMUX_DMAREQ_ID_SPI1_RX       - DMAMUX_DMAREQ_ID_SPI1_TX       - DMAMUX_DMAREQ_ID_SPI2_RX      
+  *         - DMAMUX_DMAREQ_ID_ADC1          - DMAMUX_DMAREQ_ID_DAC1          - DMAMUX_DMAREQ_ID_DAC2          - DMAMUX_DMAREQ_ID_TMR6_OVERFLOW
+  *         - DMAMUX_DMAREQ_ID_TMR7_OVERFLOW - DMAMUX_DMAREQ_ID_SPI1_RX       - DMAMUX_DMAREQ_ID_SPI1_TX       - DMAMUX_DMAREQ_ID_SPI2_RX
   *         - DMAMUX_DMAREQ_ID_SPI2_TX       - DMAMUX_DMAREQ_ID_SPI3_RX       - DMAMUX_DMAREQ_ID_SPI3_TX       - DMAMUX_DMAREQ_ID_I2C1_RX
   *         - DMAMUX_DMAREQ_ID_I2C1_TX       - DMAMUX_DMAREQ_ID_I2C2_RX       - DMAMUX_DMAREQ_ID_I2C2_TX       - DMAMUX_DMAREQ_ID_I2C3_RX
   *         - DMAMUX_DMAREQ_ID_I2C3_TX       - DMAMUX_DMAREQ_ID_USART1_RX     - DMAMUX_DMAREQ_ID_USART1_TX     - DMAMUX_DMAREQ_ID_USART2_RX
   *         - DMAMUX_DMAREQ_ID_USART2_TX     - DMAMUX_DMAREQ_ID_USART3_RX     - DMAMUX_DMAREQ_ID_USART3_TX     - DMAMUX_DMAREQ_ID_USART4_RX
   *         - DMAMUX_DMAREQ_ID_USART4_TX     - DMAMUX_DMAREQ_ID_USART5_RX     - DMAMUX_DMAREQ_ID_USART5_TX     - DMAMUX_DMAREQ_ID_USART6_RX
   *         - DMAMUX_DMAREQ_ID_USART6_TX     - DMAMUX_DMAREQ_ID_USART7_RX     - DMAMUX_DMAREQ_ID_USART7_TX     - DMAMUX_DMAREQ_ID_USART8_RX
-  *         - DMAMUX_DMAREQ_ID_USART8_TX     - DMAMUX_DMAREQ_ID_TMR1_CH1      - DMAMUX_DMAREQ_ID_TMR1_CH2      - DMAMUX_DMAREQ_ID_TMR1_CH3        
+  *         - DMAMUX_DMAREQ_ID_USART8_TX     - DMAMUX_DMAREQ_ID_TMR1_CH1      - DMAMUX_DMAREQ_ID_TMR1_CH2      - DMAMUX_DMAREQ_ID_TMR1_CH3
   *         - DMAMUX_DMAREQ_ID_TMR1_CH4      - DMAMUX_DMAREQ_ID_TMR1_OVERFLOW - DMAMUX_DMAREQ_ID_TMR1_TRIG     - DMAMUX_DMAREQ_ID_TMR1_HALL
   *         - DMAMUX_DMAREQ_ID_TMR2_CH1      - DMAMUX_DMAREQ_ID_TMR2_CH2      - DMAMUX_DMAREQ_ID_TMR2_CH3      - DMAMUX_DMAREQ_ID_TMR2_CH4
   *         - DMAMUX_DMAREQ_ID_TMR2_OVERFLOW - DMAMUX_DMAREQ_ID_TMR2_TRIG     - DMAMUX_DMAREQ_ID_TMR3_CH1      - DMAMUX_DMAREQ_ID_TMR3_CH2
@@ -450,15 +450,15 @@ void dmamux_enable(dma_type *dma_x, confirm_state new_state)
   * @param  dmamux_req_sel:
   *         this parameter can be one of the following values:
   *         - DMAMUX_DMAREQ_ID_REQ_G1        - DMAMUX_DMAREQ_ID_REQ_G2        - DMAMUX_DMAREQ_ID_REQ_G3        - DMAMUX_DMAREQ_ID_REQ_G4
-  *         - DMAMUX_DMAREQ_ID_ADC1          - DMAMUX_DMAREQ_ID_DAC1          - DMAMUX_DMAREQ_ID_DAC2          - DMAMUX_DMAREQ_ID_TMR6_OVERFLOW    
-  *         - DMAMUX_DMAREQ_ID_TMR7_OVERFLOW - DMAMUX_DMAREQ_ID_SPI1_RX       - DMAMUX_DMAREQ_ID_SPI1_TX       - DMAMUX_DMAREQ_ID_SPI2_RX      
+  *         - DMAMUX_DMAREQ_ID_ADC1          - DMAMUX_DMAREQ_ID_DAC1          - DMAMUX_DMAREQ_ID_DAC2          - DMAMUX_DMAREQ_ID_TMR6_OVERFLOW
+  *         - DMAMUX_DMAREQ_ID_TMR7_OVERFLOW - DMAMUX_DMAREQ_ID_SPI1_RX       - DMAMUX_DMAREQ_ID_SPI1_TX       - DMAMUX_DMAREQ_ID_SPI2_RX
   *         - DMAMUX_DMAREQ_ID_SPI2_TX       - DMAMUX_DMAREQ_ID_SPI3_RX       - DMAMUX_DMAREQ_ID_SPI3_TX       - DMAMUX_DMAREQ_ID_I2C1_RX
   *         - DMAMUX_DMAREQ_ID_I2C1_TX       - DMAMUX_DMAREQ_ID_I2C2_RX       - DMAMUX_DMAREQ_ID_I2C2_TX       - DMAMUX_DMAREQ_ID_I2C3_RX
   *         - DMAMUX_DMAREQ_ID_I2C3_TX       - DMAMUX_DMAREQ_ID_USART1_RX     - DMAMUX_DMAREQ_ID_USART1_TX     - DMAMUX_DMAREQ_ID_USART2_RX
   *         - DMAMUX_DMAREQ_ID_USART2_TX     - DMAMUX_DMAREQ_ID_USART3_RX     - DMAMUX_DMAREQ_ID_USART3_TX     - DMAMUX_DMAREQ_ID_USART4_RX
   *         - DMAMUX_DMAREQ_ID_USART4_TX     - DMAMUX_DMAREQ_ID_USART5_RX     - DMAMUX_DMAREQ_ID_USART5_TX     - DMAMUX_DMAREQ_ID_USART6_RX
   *         - DMAMUX_DMAREQ_ID_USART6_TX     - DMAMUX_DMAREQ_ID_USART7_RX     - DMAMUX_DMAREQ_ID_USART7_TX     - DMAMUX_DMAREQ_ID_USART8_RX
-  *         - DMAMUX_DMAREQ_ID_USART8_TX     - DMAMUX_DMAREQ_ID_TMR1_CH1      - DMAMUX_DMAREQ_ID_TMR1_CH2      - DMAMUX_DMAREQ_ID_TMR1_CH3        
+  *         - DMAMUX_DMAREQ_ID_USART8_TX     - DMAMUX_DMAREQ_ID_TMR1_CH1      - DMAMUX_DMAREQ_ID_TMR1_CH2      - DMAMUX_DMAREQ_ID_TMR1_CH3
   *         - DMAMUX_DMAREQ_ID_TMR1_CH4      - DMAMUX_DMAREQ_ID_TMR1_OVERFLOW - DMAMUX_DMAREQ_ID_TMR1_TRIG     - DMAMUX_DMAREQ_ID_TMR1_HALL
   *         - DMAMUX_DMAREQ_ID_TMR2_CH1      - DMAMUX_DMAREQ_ID_TMR2_CH2      - DMAMUX_DMAREQ_ID_TMR2_CH3      - DMAMUX_DMAREQ_ID_TMR2_CH4
   *         - DMAMUX_DMAREQ_ID_TMR2_OVERFLOW - DMAMUX_DMAREQ_ID_TMR2_TRIG     - DMAMUX_DMAREQ_ID_TMR3_CH1      - DMAMUX_DMAREQ_ID_TMR3_CH2
@@ -664,13 +664,13 @@ flag_status dmamux_sync_interrupt_flag_get(dma_type *dma_x, uint32_t flag)
   uint32_t index = 0;
   uint32_t tmpreg = 0, enablestatus = 0;
   uint32_t regoffset = 0x4;
-  
+
   while((sync_int_temp & 0x00000001) == RESET)
   {
     sync_int_temp = sync_int_temp >> 1;
     index++;
   }
-  
+
   if(dma_x == DMA1)
   {
     tmpreg = *(uint32_t*)(DMA1MUX_BASE + (index * regoffset));
@@ -679,7 +679,7 @@ flag_status dmamux_sync_interrupt_flag_get(dma_type *dma_x, uint32_t flag)
   {
     tmpreg = *(uint32_t*)(DMA2MUX_BASE + (index * regoffset));
   }
-  
+
   if((tmpreg & (uint32_t)0x00000100) != (uint32_t)RESET)
   {
     enablestatus = SET;
@@ -688,7 +688,7 @@ flag_status dmamux_sync_interrupt_flag_get(dma_type *dma_x, uint32_t flag)
   {
     enablestatus = RESET;
   }
-  
+
   if(dma_x == DMA1)
   {
     if(((DMA1->muxsyncsts & flag) != (uint32_t)RESET) && (enablestatus != RESET))
@@ -711,7 +711,7 @@ flag_status dmamux_sync_interrupt_flag_get(dma_type *dma_x, uint32_t flag)
       bitstatus = RESET;
     }
   }
-  return bitstatus;   
+  return bitstatus;
 }
 
 /**
@@ -774,18 +774,18 @@ flag_status dmamux_generator_interrupt_flag_get(dma_type *dma_x, uint32_t flag)
   uint32_t index = 0;
   uint32_t tmpreg = 0, enablestatus = 0;
   uint32_t regoffset = 0x4;
-  
+
   while((sync_int_temp & 0x00000001) == RESET)
   {
     sync_int_temp = sync_int_temp >> 1;
     index++;
   }
-  
+
   if(dma_x == DMA1)
     tmpreg = *(uint32_t*)(DMA1MUX_GENERATOR1_BASE + (index * regoffset));
   else
     tmpreg = *(uint32_t*)(DMA2MUX_GENERATOR1_BASE + (index * regoffset));
-  
+
   if((tmpreg & (uint32_t)0x00000100) != (uint32_t)RESET)
   {
     enablestatus = SET;
@@ -816,8 +816,8 @@ flag_status dmamux_generator_interrupt_flag_get(dma_type *dma_x, uint32_t flag)
       bitstatus = RESET;
     }
   }
-  
-  return bitstatus; 
+
+  return bitstatus;
 }
 
 /**

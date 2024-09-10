@@ -979,7 +979,7 @@ flag_status can_interrupt_flag_get(can_type* can_x, uint32_t can_flag)
     case CAN_ETR_FLAG:
       int_status = (flag_status)(can_x->inten_bit.eoien && can_x->inten_bit.etrien);
       break;
-    case CAN_EOIF_FLAG:     
+    case CAN_EOIF_FLAG:
       int_status = (flag_status)can_x->inten_bit.eoien;
       break;
     case CAN_TM0TCF_FLAG:

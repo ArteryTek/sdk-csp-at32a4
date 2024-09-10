@@ -351,7 +351,7 @@ typedef struct
       __IO uint32_t rtsen                : 1; /* [8] */
       __IO uint32_t ctsen                : 1; /* [9] */
       __IO uint32_t ctscfien             : 1; /* [10] */
-      __IO uint32_t smusen               : 1; /* [11] */ 
+      __IO uint32_t smusen               : 1; /* [11] */
       __IO uint32_t reserved1            : 1; /* [12] */
       __IO uint32_t lpwufie              : 1; /* [13] */
       __IO uint32_t rs485en              : 1; /* [14] */
@@ -374,7 +374,7 @@ typedef struct
       __IO uint32_t reserved1            : 16;/* [31:16] */
     } gdiv_bit;
   };
-  
+
   /**
   * @brief usart rtov register, offset:0x1C
   */
@@ -387,7 +387,7 @@ typedef struct
       __IO uint32_t reserved1            : 8; /* [31:24] */
     } rtov_bit;
   };
-  
+
   /**
   * @brief usart ifc register, offset:0x20
   */

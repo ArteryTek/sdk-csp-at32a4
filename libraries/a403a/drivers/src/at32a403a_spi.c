@@ -579,7 +579,7 @@ flag_status spi_i2s_flag_get(spi_type* spi_x, uint32_t spi_i2s_flag)
 flag_status spi_i2s_interrupt_flag_get(spi_type* spi_x, uint32_t spi_i2s_flag)
 {
   flag_status status = RESET;
-  
+
   switch(spi_i2s_flag)
   {
     case SPI_I2S_RDBF_FLAG:

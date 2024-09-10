@@ -545,7 +545,7 @@ flag_status usb_flag_get(usbd_type *usbx, uint16_t flag)
 flag_status usb_interrupt_flag_get(usbd_type *usbx, uint16_t flag)
 {
   flag_status status = RESET;
-  
+
   if(flag == USB_TC_FLAG)
   {
     if(usbx->intsts & USB_TC_FLAG)

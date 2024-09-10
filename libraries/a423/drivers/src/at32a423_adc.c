@@ -419,7 +419,7 @@ void adc_ordinary_channel_set(adc_type *adc_x, adc_channel_select_type adc_chann
     tmp_reg |= adc_sampletime << 3 * (adc_channel - ADC_CHANNEL_20);
     adc_x->spt3 = tmp_reg;
   }
-  
+
   if(adc_sequence < 7)
   {
     tmp_reg = adc_x->osq3;
@@ -511,7 +511,7 @@ void adc_preempt_channel_length_set(adc_type *adc_x, uint8_t adc_channel_lenght)
 void adc_preempt_channel_set(adc_type *adc_x, adc_channel_select_type adc_channel, uint8_t adc_sequence, adc_sampletime_select_type adc_sampletime)
 {
   uint32_t tmp_reg;
-  uint8_t sequence_index; 
+  uint8_t sequence_index;
   if(adc_channel < ADC_CHANNEL_10)
   {
     tmp_reg = adc_x->spt2;
@@ -533,7 +533,7 @@ void adc_preempt_channel_set(adc_type *adc_x, adc_channel_select_type adc_channe
     tmp_reg |= adc_sampletime << 3 * (adc_channel - ADC_CHANNEL_20);
     adc_x->spt3 = tmp_reg;
   }
-  
+
   sequence_index = adc_sequence + 3 - adc_x->psq_bit.pclen;
   switch(sequence_index)
   {

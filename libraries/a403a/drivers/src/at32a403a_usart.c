@@ -103,7 +103,7 @@ void usart_reset(usart_type* usart_x)
   *         this parameter can be one of the following values:
   *         - USART_DATA_8BITS
   *         - USART_DATA_9BITS.
-  *         noteï¼š
+  *         noteï¼?
   *         - when parity check is disabled, the data bit width is the actual data bit number.
   *         - when parity check is enabled, the data bit width is the actual data bit number minus 1, and the MSB bit is replaced with the parity bit.
   * @param  stop_bit: stop bits transmitted
@@ -635,14 +635,14 @@ flag_status usart_interrupt_flag_get(usart_type* usart_x, uint32_t flag)
       break;
     case USART_IDLEF_FLAG:
       int_status = (flag_status)usart_x->ctrl1_bit.idleien;
-      break;  
+      break;
     case USART_NERR_FLAG:
     case USART_FERR_FLAG:
       int_status = (flag_status)usart_x->ctrl3_bit.errien;
       break;
     case USART_PERR_FLAG:
       int_status = (flag_status)usart_x->ctrl1_bit.perrien;
-      break;      
+      break;
     default:
       int_status = RESET;
       break;
