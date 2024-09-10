@@ -1,7 +1,7 @@
 ;**************************************************************************
 ;* @file     startup_at32a403a.s
 ;* @brief    at32a403a startup file for keil
-;* <<< Use Configuration Wizard in Context Menu >>>  
+;* <<< Use Configuration Wizard in Context Menu >>>
 ;**************************************************************************
 ;
 

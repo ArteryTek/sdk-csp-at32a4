@@ -358,7 +358,7 @@ typedef enum
   CRM_HEXT_SCLK_DIV_8                    = 0x03, /*!< hext div8 to sysclk */
   CRM_HEXT_SCLK_DIV_16                   = 0x04, /*!< hext div16 to sysclk */
   CRM_HEXT_SCLK_DIV_32                   = 0x05  /*!< hext div32 to sysclk */
-} crm_hext_sclk_div_type;                
+} crm_hext_sclk_div_type;
 
 /**
   * @brief crm hick to sysclk division

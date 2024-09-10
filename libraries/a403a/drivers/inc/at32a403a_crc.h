@@ -108,7 +108,7 @@ typedef struct
   };
 
   /**
-    * @brief crc ctrl register, offset:0x08 
+    * @brief crc ctrl register, offset:0x08
     */
   union
   {
@@ -142,7 +142,7 @@ typedef struct
   };
 
   /**
-    * @brief crc polynomial register, offset:0x14 
+    * @brief crc polynomial register, offset:0x14
     */
   union
   {

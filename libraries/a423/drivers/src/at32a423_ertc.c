@@ -186,7 +186,7 @@ error_status ertc_init_mode_enter(void)
 void ertc_init_mode_exit(void)
 {
   ERTC->sts = 0xFFFFFF7F;
-  
+
   /* wait register update finish */
   ertc_wait_update();
 }
@@ -1417,7 +1417,7 @@ flag_status ertc_flag_get(uint32_t flag)
 flag_status ertc_interrupt_flag_get(uint32_t flag)
 {
   __IO uint32_t iten = 0;
-  
+
   switch(flag)
   {
     case ERTC_ALAF_FLAG:
@@ -1436,7 +1436,7 @@ flag_status ertc_interrupt_flag_get(uint32_t flag)
     case ERTC_TP2F_FLAG:
       iten = ERTC->tamp_bit.tpien;
       break;
-    
+
     default:
       break;
   }

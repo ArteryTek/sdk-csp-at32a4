@@ -1007,7 +1007,7 @@ void emac_ptp_dma_descriptor_list_address_set(emac_dma_tx_rx_type transfer_type,
     {
       dma_tx_desc_to_set = dma_desc_tab;
       ptp_dma_tx_desc_to_set = ptp_dma_desc_tab;
-      
+
       for(i = 0; i < buffer_count; i++)
       {
         dma_descriptor = dma_desc_tab + i;
@@ -1024,13 +1024,13 @@ void emac_ptp_dma_descriptor_list_address_set(emac_dma_tx_rx_type transfer_type,
         {
           dma_descriptor->buf2nextdescaddr = (uint32_t) dma_desc_tab;
         }
-        
+
         (&ptp_dma_desc_tab[i])->buf1addr = dma_descriptor->buf1addr;
         (&ptp_dma_desc_tab[i])->buf2nextdescaddr = dma_descriptor->buf2nextdescaddr;
       }
-      
+
       (&ptp_dma_desc_tab[i-1])->status = (uint32_t) ptp_dma_desc_tab;
-      
+
       EMAC_DMA->tdladdr_bit.stl = (uint32_t) dma_desc_tab;
       break;
     }
@@ -1038,7 +1038,7 @@ void emac_ptp_dma_descriptor_list_address_set(emac_dma_tx_rx_type transfer_type,
     {
       dma_rx_desc_to_get = dma_desc_tab;
       ptp_dma_rx_desc_to_get = ptp_dma_desc_tab;
-      
+
       for(i = 0; i < buffer_count; i++)
       {
         dma_descriptor = dma_desc_tab + i;
@@ -1057,13 +1057,13 @@ void emac_ptp_dma_descriptor_list_address_set(emac_dma_tx_rx_type transfer_type,
         {
           dma_descriptor->buf2nextdescaddr = (uint32_t) dma_desc_tab;
         }
-        
+
         (&ptp_dma_desc_tab[i])->buf1addr = dma_descriptor->buf1addr;
         (&ptp_dma_desc_tab[i])->buf2nextdescaddr = dma_descriptor->buf2nextdescaddr;
       }
-      
+
       (&ptp_dma_desc_tab[i-1])->status = (uint32_t) ptp_dma_desc_tab;
-      
+
       EMAC_DMA->rdladdr_bit.srl = (uint32_t) dma_desc_tab;
       break;
     }
@@ -2377,15 +2377,15 @@ flag_status emac_dma_flag_get(uint32_t dma_flag)
   */
 flag_status emac_dma_interrupt_flag_get(uint32_t dma_flag)
 {
-  flag_status status = RESET;  
+  flag_status status = RESET;
   switch(dma_flag)
   {
     case EMAC_DMA_TI_FLAG:
     case EMAC_DMA_TBU_FLAG:
     case EMAC_DMA_RI_FLAG:
     case EMAC_DMA_ERI_FLAG:
-      if((EMAC_DMA->sts & dma_flag) && 
-        (EMAC_DMA->ie & dma_flag) && 
+      if((EMAC_DMA->sts & dma_flag) &&
+        (EMAC_DMA->ie & dma_flag) &&
         (EMAC_DMA->sts & EMAC_DMA_NIS_FLAG))
         status = SET;
       break;
@@ -2394,12 +2394,12 @@ flag_status emac_dma_interrupt_flag_get(uint32_t dma_flag)
     case EMAC_DMA_OVF_FLAG:
     case EMAC_DMA_UNF_FLAG:
     case EMAC_DMA_RBU_FLAG:
-    case EMAC_DMA_RPS_FLAG: 
+    case EMAC_DMA_RPS_FLAG:
     case EMAC_DMA_RWT_FLAG:
     case EMAC_DMA_ETI_FLAG:
     case EMAC_DMA_FBEI_FLAG:
-      if((EMAC_DMA->sts & dma_flag) && 
-        (EMAC_DMA->ie & dma_flag) && 
+      if((EMAC_DMA->sts & dma_flag) &&
+        (EMAC_DMA->ie & dma_flag) &&
         (EMAC_DMA->sts & EMAC_DMA_AIS_FLAG))
         status = SET;
       break;

@@ -644,7 +644,7 @@ void crm_auto_step_mode_enable(confirm_state new_state)
     CRM->misc2_bit.auto_step_en = CRM_AUTO_STEP_MODE_DISABLE;
 }
 
-/** 
+/**
   * @brief  usart multi clock source select
   * @param  usart_index
   *         this parameter can be one of the following values:
@@ -675,7 +675,7 @@ void crm_usart_clock_select(crm_usart_type usart_index, crm_usart_clock_source_t
   }
 }
 
-/** 
+/**
   * @brief  usart multi clock source select
   * @param  usart_index
   *         this parameter can be one of the following values:
@@ -704,7 +704,7 @@ crm_usart_clock_source_type crm_usart_clock_get(crm_usart_type usart_index)
   return value;
 }
 
-/** 
+/**
   * @brief  i2c multi clock source select
   * @param  i2c_index
   *         this parameter can be one of the following values:
@@ -726,7 +726,7 @@ void crm_i2c_clock_select(crm_i2c_type i2c_index, crm_i2c_clock_source_type valu
   }
 }
 
-/** 
+/**
   * @brief  i2c multi clock source select
   * @param  i2c_index
   *         this parameter can be one of the following values:
@@ -747,11 +747,11 @@ crm_i2c_clock_source_type crm_i2c_clock_get(crm_i2c_type i2c_index)
   return value;
 }
 
-/** 
+/**
   * @brief  adc multi clock source select
   * @param  value
   *         this parameter can be one of the following values:
-  *         - CRM_ADC_CLOCK_SOURCE_HCLK  
+  *         - CRM_ADC_CLOCK_SOURCE_HCLK
   *         - CRM_ADC_CLOCK_SOURCE_PLLCLK
   * @retval none
   */
@@ -788,7 +788,7 @@ void crm_hick_divider_select(crm_hick_div_6_type value)
   crm_hick_sclk_div_set((crm_hick_sclk_div_type)temp_div);
 }
 
-/** 
+/**
   * @brief  hick as system clock frequency select
   * @param  value
   *         this parameter can be one of the following values:
@@ -815,7 +815,7 @@ void crm_hick_sclk_frequency_select(crm_hick_sclk_frequency_type value)
   crm_hick_sclk_div_set((crm_hick_sclk_div_type)temp_div);
 }
 
-/** 
+/**
   * @brief  usb 48 mhz clock source select
   * @param  value
   *         this parameter can be one of the following values:

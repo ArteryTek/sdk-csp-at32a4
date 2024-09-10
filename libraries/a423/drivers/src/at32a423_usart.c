@@ -120,9 +120,9 @@ void usart_init(usart_type* usart_x, uint32_t baud_rate, usart_data_bit_num_type
   crm_clocks_freq_type clocks_freq;
   uint32_t apb_clock, temp_val;
   crm_usart_clock_source_type usart_clk;
-  
+
   crm_clocks_freq_get(&clocks_freq);
-  
+
   if(usart_x == USART1)
   {
     usart_clk = crm_usart_clock_get(CRM_USART1);
@@ -136,7 +136,7 @@ void usart_init(usart_type* usart_x, uint32_t baud_rate, usart_data_bit_num_type
     }
     else if(CRM_USART_CLOCK_SOURCE_LEXT == usart_clk)
     {
-      apb_clock = LEXT_VALUE;  
+      apb_clock = LEXT_VALUE;
     }
     else
     {
@@ -160,7 +160,7 @@ void usart_init(usart_type* usart_x, uint32_t baud_rate, usart_data_bit_num_type
     }
     else if(CRM_USART_CLOCK_SOURCE_LEXT == usart_clk)
     {
-      apb_clock = LEXT_VALUE;  
+      apb_clock = LEXT_VALUE;
     }
     else
     {
@@ -184,7 +184,7 @@ void usart_init(usart_type* usart_x, uint32_t baud_rate, usart_data_bit_num_type
     }
     else if(CRM_USART_CLOCK_SOURCE_LEXT == usart_clk)
     {
-      apb_clock = LEXT_VALUE;  
+      apb_clock = LEXT_VALUE;
     }
     else
     {
@@ -203,7 +203,7 @@ void usart_init(usart_type* usart_x, uint32_t baud_rate, usart_data_bit_num_type
   {
     apb_clock = clocks_freq.apb1_freq;
   }
-  
+
   temp_val = (apb_clock * 10 / baud_rate);
   if((temp_val % 10) < 5)
   {
@@ -214,7 +214,7 @@ void usart_init(usart_type* usart_x, uint32_t baud_rate, usart_data_bit_num_type
     temp_val = (temp_val / 10) + 1;
   }
   usart_x->baudr_bit.div = temp_val;
-  
+
   if(data_bit == USART_DATA_7BITS)
   {
     usart_x->ctrl1_bit.dbn1 = 1;
@@ -735,14 +735,14 @@ flag_status usart_interrupt_flag_get(usart_type* usart_x, uint32_t flag)
       break;
     case USART_IDLEF_FLAG:
       int_status = (flag_status)usart_x->ctrl1_bit.idleien;
-      break;  
+      break;
     case USART_NERR_FLAG:
     case USART_FERR_FLAG:
       int_status = (flag_status)usart_x->ctrl3_bit.errien;
       break;
     case USART_PERR_FLAG:
       int_status = (flag_status)usart_x->ctrl1_bit.perrien;
-      break;   
+      break;
     case USART_RTODF_FLAG:
       int_status = (flag_status)usart_x->ctrl1_bit.retodie;
       break;
@@ -925,7 +925,7 @@ void usart_low_power_wakeup_set(usart_type* usart_x, usart_wakeup_method_type wa
   */
 void usart_deep_sleep_mode_enable(usart_type* usart_x, confirm_state new_state)
 {
-  usart_x->ctrl3_bit.smusen = new_state; 
+  usart_x->ctrl3_bit.smusen = new_state;
 }
 
 /**
@@ -981,7 +981,7 @@ void usart_transmit_pin_polarity_reverse(usart_type* usart_x, confirm_state new_
   */
 void usart_receive_pin_polarity_reverse(usart_type* usart_x, confirm_state new_state)
 {
-  usart_x->ctrl2_bit.rxrev = new_state; 
+  usart_x->ctrl2_bit.rxrev = new_state;
 }
 
 /**
@@ -995,7 +995,7 @@ void usart_receive_pin_polarity_reverse(usart_type* usart_x, confirm_state new_s
   */
 void usart_receiver_timeout_detection_enable(usart_type* usart_x, confirm_state new_state)
 {
-  usart_x->ctrl1_bit.rtoden = new_state; 
+  usart_x->ctrl1_bit.rtoden = new_state;
 }
 
 /**

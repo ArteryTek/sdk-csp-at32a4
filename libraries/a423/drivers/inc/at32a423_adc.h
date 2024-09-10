@@ -751,9 +751,9 @@ typedef struct
       __IO uint32_t reserved1            : 25; /* [31:7] */
     } calval_bit;
   };
-  
+
   __IO uint32_t reserved3[6];
-  
+
   /**
   * @brief adc misc register, offset:0xD0
   */
